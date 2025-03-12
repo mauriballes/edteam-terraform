@@ -9,13 +9,13 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "terraformedteamcurso"
-    region = "us-east-1"
-    key = "tfstate/terraform.state"
+    bucket         = "terraformedteamcurso"
+    region         = "us-east-1"
+    key            = "tfstate/terraform.state"
     dynamodb_table = "terraformstate"
   }
 }
 
 provider "aws" {
-  region     = "us-east-1"
+  region = "us-east-1"
 }
