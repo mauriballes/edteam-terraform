@@ -7,6 +7,13 @@ terraform {
       version = "5.87.0"
     }
   }
+
+  backend "s3" {
+    bucket = "terraformedteamcurso"
+    region = "us-east-1"
+    key = "tfstate/terraform.state"
+    dynamodb_table = "terraformstate"
+  }
 }
 
 provider "aws" {
