@@ -1,11 +1,11 @@
-# resource "aws_subnet" "default_subnet_7" {
-#   vpc_id     = data.aws_vpc.default_vpc.id
-#   cidr_block = "172.31.96.0/20"
+resource "aws_subnet" "default_subnet_7" {
+  vpc_id     = data.aws_vpc.default_vpc.id
+  cidr_block = "172.31.96.0/20"
 
-#   tags = {
-#     Name = "Default Subnet"
-#   }
-# }
+  tags = {
+    Name = "Default Subnet"
+  }
+}
 
 module "my_vpc" {
   source  = "terraform-aws-modules/vpc/aws"
